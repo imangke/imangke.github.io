@@ -1,16 +1,8 @@
 ---
-# front matter 告诉jekyll处理liquid
+# front matter 告诉jekyll处理liquid.
+# liquid三个核心：{{objects}}, {%tags%} , filters "|"
+layout: default
+title: Home
 ---
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Home</title>
-    </head>
-
-    <body>
-        <h1>{{ "大家好，我是茫客" }}</h1>
-        {{ page.url }}index.html
-    </body>
-</html>
+<h1>{{ "大家好，这里是茫客首页" }}</h1>
+{{page.url}}index.html
