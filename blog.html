@@ -7,7 +7,7 @@ biaoti: 一个蓝屏问题的解决方案
 
 <u1>{% for post in site.posts %}
         <ul>
-            <h4><a href="{{ post.url }}">{{post.biaoti }}</a></h4>
+            <h4><a href="{{ post.url }}">{{post.biaoti }}  {{ post.date | date_to_string}}</a></h4>
         </ul>
     {% endfor %}    
 </u1>
