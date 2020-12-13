@@ -1,6 +1,8 @@
-I"wS<h1 id="python-学习提纲">Python 学习提纲</h1>
+I"?<p>[TOC]</p>
 
-<p>[TOC]</p>
+<hr />
+
+<h1 id="python-学习提纲">Python 学习提纲</h1>
 
 <h2 id="1-关于注释">1. 关于注释</h2>
 
@@ -225,6 +227,8 @@ else:
 
 <p>可以使用 【列表名】【【索引】】获取一个元素。(用英文的方括号，会显示为链接，所以此处用中文的方括号，是不对的)</p>
 
+<p>可以使用[列表名][[索引]]获取一个元素。（加一个\转义符就可以了，自己瞎摸的）</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fruit</span> <span class="o">=</span> <span class="p">[</span><span class="s">"apple"</span><span class="p">,</span><span class="s">"peach"</span><span class="p">,</span><span class="s">"orange"</span><span class="p">]</span>
 <span class="n">fruit</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">fruit</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -307,5 +311,139 @@ else:
 	第三行
 """</span>
 </code></pre></div></div>
+
+<h3 id="索引负索引">索引、负索引</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str1</span> <span class="o">=</span> <span class="s">"abcdefg"</span>
+<span class="n">str1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="字符串的拼接">字符串的拼接</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"cat"</span><span class="o">+</span><span class="s">"dog"</span>
+</code></pre></div></div>
+
+<h3 id="字符串的乘法">字符串的乘法</h3>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"cat"</span><span class="o">*</span><span class="mi">3</span>
+</code></pre></div></div>
+
+<h3 id="字符串改变大小写">字符串改变大小写</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"dog"</span><span class="p">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="s">"DOG"</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="字符串的格式化">字符串的格式化</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"{}strs{}strs{}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"x"</span><span class="p">,</span><span class="s">"y"</span><span class="p">,</span><span class="s">"z"</span><span class="p">)</span> <span class="c1"># 结果为"xstrsystrsz"
+</span></code></pre></div></div>
+
+<h3 id="分割">分割</h3>
+
+<p>分割的结果是列表。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"my name is zkx,what is your name?"</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">","</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'my name is zkx'</span><span class="p">,</span> <span class="s">'what is your name?'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"my name is zkx,your name is liwang,his name is wange"</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">","</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'my name is zkx'</span><span class="p">,</span> <span class="s">'your name is liwang'</span><span class="p">,</span> <span class="s">'his name is wange'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="连接">连接</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"**"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s">"abc"</span><span class="p">)</span>
+<span class="s">'a**b**c'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"好人"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s">"你我他"</span><span class="p">)</span>
+<span class="s">'你好人我好人他'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"+"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s">"abc"</span><span class="p">)</span>
+<span class="s">'a+b+c'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">str1</span><span class="o">=</span><span class="s">"abc"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"="</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+<span class="s">'a=b=c'</span>
+</code></pre></div></div>
+
+<p>”“.join(字符串列表) 空字符串“”。或者”  “.join(字符串列表)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s">"a"</span><span class="p">,</span><span class="s">"b"</span><span class="p">,</span><span class="s">"c"</span><span class="p">,</span><span class="s">"d"</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="s">'abcd'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">"zkx"</span><span class="p">,</span><span class="s">"is"</span><span class="p">,</span><span class="s">"a"</span><span class="p">,</span><span class="s">"good"</span><span class="p">,</span><span class="s">"man"</span><span class="p">])</span>
+<span class="s">'zkxisagoodman'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"   "</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">"zkx"</span><span class="p">,</span><span class="s">"is"</span><span class="p">,</span><span class="s">"a"</span><span class="p">,</span><span class="s">"good"</span><span class="p">,</span><span class="s">"man"</span><span class="p">])</span>
+<span class="s">'zkx   is   a   good   man'</span>
+</code></pre></div></div>
+
+<h3 id="去除空格">去除空格</h3>
+
+<p>去除开关或末尾的空格</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"     zkx      "</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="s">'zkx'</span>
+</code></pre></div></div>
+
+<h3 id="替换">替换</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"zkx is a bad man"</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"bad"</span><span class="p">,</span><span class="s">"good"</span><span class="p">)</span>
+<span class="s">'zkx is a good man'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"zkx"</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"z"</span><span class="p">,</span><span class="s">"k"</span><span class="p">)</span>
+<span class="s">'kkx'</span>
+</code></pre></div></div>
+
+<h3 id="查找索引">查找索引</h3>
+
+<p>查找字符第一次在字符串出现的索引</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"animal"</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="s">"m"</span><span class="p">)</span>
+<span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"zkx,zkx,zkx"</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="s">"zkx"</span><span class="p">)</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"zkx,wangli,liwang"</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="s">"wang"</span><span class="p">)</span>
+<span class="mi">4</span>
+</code></pre></div></div>
+
+<p>如果查不到会报异常，可以用try .. except处理</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="s">"zkx"</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="s">"w"</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"w not found"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="in的使用">in的使用</h3>
+
+<p>判断一个字符串是不是在另一个字符串中，返回结果为False 或者 True</p>
+
+<h3 id="字符串转义">字符串转义</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">"zkx say: "</span><span class="n">good</span> <span class="n">morning</span><span class="p">.</span><span class="s">""</span>
+<span class="nb">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"zkx say:</span><span class="se">\"</span><span class="s">good morning</span><span class="se">\"</span><span class="s">"</span>
+<span class="s">'zkx say:"good morning"'</span>
+</code></pre></div></div>
+
+<p>python中用\来转义（escaping)。上面的例子也可以用单引号和双引号轮流用来解决。</p>
+
+<h3 id="换行符">换行符</h3>
+
+<p>字符串中加\n表示换行</p>
+
+<h3 id="切片">切片</h3>
+
+<p>slicing(切片)，可以将可迭代对象中元素的子集，创建为一个新的可迭代对象。切片时顾头不顾尾。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s">"zkx"</span><span class="p">,</span><span class="s">"is"</span><span class="p">,</span><span class="s">"a"</span><span class="p">,</span><span class="s">"good"</span><span class="p">,</span><span class="s">"man"</span><span class="p">][:</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span><span class="s">'zkx'</span><span class="p">,</span> <span class="s">'is'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">]</span>
+<span class="p">[</span><span class="s">"zkx"</span><span class="p">,</span><span class="s">"is"</span><span class="p">,</span><span class="s">"a"</span><span class="p">,</span><span class="s">"good"</span><span class="p">,</span><span class="s">"man"</span><span class="p">][:</span><span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="s">'zkx'</span><span class="p">,</span> <span class="s">'is'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'good'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>注意：[0:4]=[:4]</p>
+
+<p>​			[2:5]=[2:] 一直到末尾</p>
+
+<p>​           头和尾的索引可以省略，如果均空，表示返回原可迭代对像</p>
+
+<p>​           有一点奇怪[“zkx”,”is”,”a”,”good”,”man”][2:100]好像也没有报错。</p>
 
 :ET
